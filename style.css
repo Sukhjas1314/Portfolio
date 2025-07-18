@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.5;
+    background-color: #0d0d33;
+    height: 100vh;
+    background: url('assets/space.gif') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    background-color: #020215;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px solid rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.logo .angle {
+    color: #a259ff;
+    font-weight: bold;
+}
+
+.logo .slash {
+    color: #a259ff;
+    font-weight: bold;
+}
+
+.logo .name {
+    color: #fff;
+    font-weight: 900;
+    padding: 3.8px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #a259ff;
+}
+
+.github-btn {
+    border: 1px solid #a259ff;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    color: #a259ff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.github-btn:hover {
+    background: #a259ff;
+    color: #fff;
+}
+
+#hero {
+    padding: 6rem 4rem;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    min-height: 100vh;
+    color: white;
+}
+
+.hero-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.hero-text {
+    flex: 1 1 500px;
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+}
+
+.hero-text .name{
+    font-size: 3rem;
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: bold;
+    color: #fff;
+}
+
+.hero-text h2{
+    font-size: 2.5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 1rem 0;
+    font-weight: 700;
+}
+
+.highlight{
+    color: #a259ff;
+    font-weight: 700;
+    font-size: 3rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.hero-text div{
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #cccccc;
+    margin-bottom: 2rem;
+}
+
+.resume-btn{
+    padding: 0.8rem 2rem;
+    font-size: 20px;
+    background : linear-gradient(90deg,#9b2020,#ba51d2);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 700;
+    box-shadow: 0 0 15px rgba(247, 89, 255, 0.863);
+    transition: transform 0.3s cubic-bezier(0.25, 1.5, 0.5, 1), box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.resume-btn:hover{
+    transform: scale(1.15);
+    box-shadow: 0 0 30px rgba(226, 92, 255, 0.7);
+    cursor: pointer;
+}
+
+.hero-image{
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.hero-image img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    box-shadow: 0 0 20px rgba(162,89,255,0.4);
+}
