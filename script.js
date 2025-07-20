@@ -3,6 +3,12 @@ let index = 0;
 let charIndex = 0;
 let currentWord = "";
 let isDeleting = false;
+const toggleBtn = document.getElementById('theme-toggle');
+
+
+toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('light-theme');
+});
 
 function type() {
     const target = document.getElementById("typing-text");
@@ -28,3 +34,6 @@ function type() {
 }
 
 type();
+
+
+
