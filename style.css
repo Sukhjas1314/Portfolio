@@ -366,6 +366,11 @@ header {
     border-radius: 15px;
     position: relative;
     margin: 40px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05)
 }
 
 .timeline-icon {
@@ -432,7 +437,10 @@ body.light-theme .card {
     padding-left: 90px;
     left: 50%;
     width: 100%;
+
 }
+
+
 
 .timeline-1::before {
     content: '';
@@ -493,6 +501,11 @@ body.light-theme .card {
     padding: 20px;
     margin: 0 350px 100px;
     text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.container:hover{
+    transform: scale(1.05)
 }
 
 .edu {
