@@ -33,6 +33,13 @@ function type() {
     setTimeout(type, isDeleting ? 50 : 100);
 }
 
+// for touch support
+document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('click', () => {
+        card.querySelector('.card-inner').classList.toggle('flipped');
+    });
+});
+
 type();
 
 
