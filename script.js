@@ -40,6 +40,25 @@ document.querySelectorAll('.card').forEach(card => {
     });
 });
 
+
+// Email setup
+(function () {
+    emailjs.init("D7sKbit7EJwFjlcyQ");
+})();
+document.getElementById("contact-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    emailjs.sendForm("service_nec1q4h", "template_oz84sho", this)
+        .then(function () {
+            document.getElementById("response-message").textContent = "✅ Email sent successfully!";
+        }, function (error) {
+            document.getElementById("response-message").textContent = "❌ Failed to send email.";
+            console.error("EmailJS error:", error);
+        });
+
+    this.reset(); // Clear the form after submission
+});
+
 type();
 
 

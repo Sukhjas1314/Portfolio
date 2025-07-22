@@ -12,11 +12,11 @@ body {
     line-height: 1.5;
     background-color: #0d0d33;
     height: 100vh;
-    background: url('assets/space.gif') no-repeat center center fixed;
+    background: url('assets/use-svg-as-background-image-particle-strokes.svg') no-repeat center center fixed;
     background-size: cover;
     color: #fff;
-    overflow-x: hidden;
     transition: background 0.3s, color 0.3s;
+    padding-top: 80px;
 }
 
 body.light-theme {
@@ -25,14 +25,21 @@ body.light-theme {
     color: #0d0b0b;
 }
 
-header {
+.sticky-header {
     width: 100%;
+    position: fixed;
     background-color: #020215;
-    padding: 1rem 2rem;
-    position: sticky;
+    padding: 1rem 1rem;
     top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px solid rgba(0, 0, 0, 0.1);
+    z-index: 3000;
+    box-shadow: 0 2px 5px solid #ffffff88;
+}
+
+#theme-toggle img {
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 
 #theme-toggle {
@@ -42,7 +49,7 @@ header {
 }
 
 #theme-toggle:hover {
-    transform: scale(1.5);
+    transform: scale(1.05);
     cursor: pointer;
 }
 
@@ -72,7 +79,7 @@ header {
     font-weight: bold;
 }
 
-.logo .name {
+.logo .logo-name {
     color: #fff;
     font-weight: 900;
     padding: 3.8px;
@@ -113,11 +120,14 @@ header {
 #hero {
     padding: 6rem 4rem;
     display: flex;
-    /* align-items: center; */
     justify-content: center;
     min-height: 100vh;
     color: white;
 }
+
+/* #hero .light-theme {
+    color: #000;
+} */
 
 .hero-container {
     display: flex;
@@ -133,6 +143,10 @@ header {
     max-width: 600px;
 }
 
+/* .hero-text.light-theme {
+    color: #020215;
+} */
+
 .hero-text h1 {
     font-family: "Special Gothic Expanded One", sans-serif;
     font-size: 3.5rem;
@@ -140,11 +154,19 @@ header {
     margin-bottom: 0.5rem;
 }
 
+.hero-text h1.light-theme {
+    color: #000;
+}
+
 .hero-text .name {
     font-size: 3.5rem;
     font-family: "Special Gothic Expanded One", sans-serif;
     font-weight: bold;
     color: #fff;
+}
+
+.hero-text .name .light-theme {
+    color: #000;
 }
 
 .hero-text h2 {
@@ -238,7 +260,7 @@ header {
     border: 2px solid #a259ff;
     border-radius: 15px;
     width: 30%;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 8px 20px #ffffff88;
     background-color: #ffffff1a;
     margin: 20px;
     transition: transform 0.2s ease;
@@ -356,7 +378,7 @@ header {
     z-index: 2;
 }
 
-.timeline-item.right .timeline-logo{
+.timeline-item.right .timeline-logo {
     left: -20px;
     z-index: 2;
 }
@@ -375,11 +397,11 @@ header {
     color: #dbd6d6;
 }
 
-.card-front img{
+.card-front img {
     width: 50px;
     height: 50px;
     margin: auto;
-    display:flex;
+    display: flex;
     margin-bottom: 10px;
 }
 
@@ -416,7 +438,7 @@ header {
     box-sizing: border-box;
     border-radius: 15px;
     border: 2px solid #a259ff;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 8px 20px #ffffff88;
 }
 
 .card-front {
@@ -465,7 +487,7 @@ header {
 }
 
 #education {
-    padding-bottom: 150px;
+    padding-bottom: 100px;
 }
 
 .education {
@@ -486,7 +508,7 @@ header {
 .container {
     width: 50%;
     border: 2px solid #a259ff;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 8px 20px #ffffff88;
     background-color: #ffffff1a;
     border-radius: 15px;
     padding: 20px;
@@ -504,7 +526,7 @@ header {
     border-bottom: 1px solid #fff;
 }
 
-.edu img{
+.edu img {
     width: 50px;
     height: 50px;
     border: 1px solid #fff;
@@ -527,4 +549,150 @@ header {
 
 .edu-content-1 {
     text-align: justify;
+}
+
+#contact {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#contact h1 {
+    font-size: 2.7rem;
+    margin-bottom: 10px;
+}
+
+#contact p {
+    font-size: 1.1rem;
+    color: #dbd6d6;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.contact-card {
+    max-width: 600px;
+    background-color: #ffffff1a;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid #a259ff;
+    box-shadow: 0 8px 20px #ffffff88;
+}
+
+.contact-card h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.contact-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-card input,
+.contact-card textarea {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    background-color: transparent;
+    resize: vertical;
+    color: #fff;
+}
+
+.contact-card textarea {
+    height: 120px;
+}
+
+.contact-card button {
+    padding: 12px;
+    background: linear-gradient(50deg, #8241d8, #a259ff);
+    color: #fff;
+    font-size: 1.7rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-card button:hover {
+    background: #fff;
+    color: #a259ff;
+}
+
+#response-message {
+    margin-top: 15px;
+    font-size: 0.95rem;
+    color: #fff;
+}
+
+.footer {
+    background: url('assets/images\ \(2\).jpeg');
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 5rem;
+}
+
+.footer ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.social-icons {
+    margin: 1rem 0;
+}
+
+.social-icons a {
+    margin: 0 0.75rem;
+    color: white;
+    font-size: 1.5rem;
+    transition: transform 0.3s, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #a259ff;
+    transform: scale(2);
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin: 1rem;
+}
+
+
+body.light-theme h1,
+body.light-theme h2,
+body.light-theme h3,
+body.light-theme h4,
+body.light-theme h5,
+body.light-theme h6,
+body.light-theme p,
+body.light-theme .name,
+body.light-theme .hero-text div,
+body.light-theme .edu1,
+body.light-theme .edu3,
+body.light-theme .edu-content,
+body.light-theme .edu-content-1,
+body.light-theme .skills h2,
+body.light-theme .skills p,
+body.light-theme .skill,
+body.light-theme .contact-card h2,
+body.light-theme .contact-card label {
+    color: #000 !important;
+}
+
+body.light-theme .skills h2{
+    border-bottom: 2px solid #000;
+}
+
+body.light-theme .skills{
+    background-color: #9b818151;
 }
