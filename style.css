@@ -20,7 +20,8 @@ body {
 }
 
 body.light-theme {
-    background-image: url('assets/9558b95660d31cdbfb19167da2a707f4.gif');
+    background: url('assets/_3qu79.gif') no-repeat center center fixed;
+    background-size: cover;
     background-color: #f1f1f5;
     color: #0d0b0b;
 }
@@ -236,6 +237,7 @@ body.light-theme {
     text-align: center;
     margin-bottom: 10px;
     color: #ffffff;
+    font-weight: 900;
 }
 
 #skills p {
@@ -545,6 +547,7 @@ body.light-theme {
 
 .edu-content {
     text-align: start;
+    padding-top: 10px;
 }
 
 .edu-content-1 {
@@ -630,7 +633,7 @@ body.light-theme {
 }
 
 .footer {
-    background: url('assets/images\ \(2\).jpeg');
+    background: url('assets/dark-polygonal-background_79603-282.avif');
     color: white;
     text-align: center;
     padding: 2rem 1rem;
@@ -683,16 +686,69 @@ body.light-theme .edu-content,
 body.light-theme .edu-content-1,
 body.light-theme .skills h2,
 body.light-theme .skills p,
-body.light-theme .skill,
 body.light-theme .contact-card h2,
 body.light-theme .contact-card label {
     color: #000 !important;
 }
 
-body.light-theme .skills h2{
+body.light-theme .skills h2 {
     border-bottom: 2px solid #000;
 }
 
-body.light-theme .skills{
-    background-color: #9b818151;
+body.light-theme .skills,
+body.light-theme .card-front,
+body.light-theme .card-back,
+body.light-theme .container {
+    background-color: rgba(255, 192, 203, 0.312);
+    box-shadow: 0 8px 20px #000;
+}
+
+body.light-theme .skill {
+    background-color: #fff;
+    transition: background 0.3s ease, color 0.3s ease;
+    color: #000;
+}
+
+body.light-theme .skill:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+body.light-theme .timeline-container::after {
+    background-color: #000;
+}
+
+body.light-theme .timeline-logo img {
+    border: #000;
+}
+
+body.light-theme .card-front span {
+    color: #000000d3;
+}
+
+body.light-theme .edu {
+    border-bottom: 1px solid #000000;
+}
+
+body.light-theme .contact-card {
+    box-shadow: 0 8px 20px #000;
+    background-color: rgba(255, 192, 203, 0.312);
+}
+
+body.light-theme .contact-card input,
+body.light-theme .contact-card textarea {
+    color: #000;
+}
+
+body.light-theme .contact-card button {
+    transition: background 0.3s ease;
+}
+
+body.light-theme .contact-card button:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+body.light-theme .footer-name{
+    color: #fff !important;
 }
