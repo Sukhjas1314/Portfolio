@@ -118,6 +118,74 @@ body.light-theme {
     color: #fff;
 }
 
+/* Hamburger icon - hidden on desktop */
+#hamburger {
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+#nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #0d0d33;
+    padding: 1rem;
+    gap: 1rem;
+    z-index: 1000;
+}
+
+#nav-links.show {
+    display: flex;
+}
+
+#nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Responsive nav - hide by default on mobile */
+@media screen and (min-width: 768px) {
+    #hamburger {
+        display: none;
+    }
+
+    #nav-links {
+        position: static;
+        top: 60px;
+        /* below the header */
+        left: 0;
+        width: auto;
+        background: none;
+        flex-direction: row;
+        gap: 1rem;
+        padding: 1rem;
+        display: flex;
+        z-index: 1000;
+    }
+
+    #nav-links.show {
+        display: flex;
+    }
+}
+
+/* Animation for slide down */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 #hero {
     padding: 6rem 4rem;
     display: flex;
@@ -125,10 +193,6 @@ body.light-theme {
     min-height: 100vh;
     color: white;
 }
-
-/* #hero .light-theme {
-    color: #000;
-} */
 
 .hero-container {
     display: flex;
@@ -143,10 +207,6 @@ body.light-theme {
     flex: 1 1 500px;
     max-width: 600px;
 }
-
-/* .hero-text.light-theme {
-    color: #020215;
-} */
 
 .hero-text h1 {
     font-family: "Special Gothic Expanded One", sans-serif;
@@ -454,6 +514,15 @@ body.light-theme {
     text-align: justify;
 }
 
+.card-back {
+    transform: rotateY(180deg);
+    background-color: #ffffff2e;
+    color: #fff;
+    text-align: justify;
+    overflow-y: auto;
+    max-height: 500px;
+}
+
 .card-front h3,
 .card-front h4 {
     margin: 10px 0;
@@ -569,8 +638,6 @@ body.light-theme {
     color: #dbd6d6;
     text-align: center;
     margin: auto;
-    margin-top: 10px;
-    margin-bottom: 50px;
 }
 
 .contact-card {
@@ -705,6 +772,7 @@ body.light-theme .container {
 
 body.light-theme .skill {
     background-color: #fff;
+    border: 1px solid #000;
     transition: background 0.3s ease, color 0.3s ease;
     color: #000;
 }
@@ -749,6 +817,197 @@ body.light-theme .contact-card button:hover {
     background-color: #000;
 }
 
-body.light-theme .footer-name{
+body.light-theme #response-message {
+    margin-top: 15px;
+    font-size: 0.95rem;
+    color: #000;
+}
+
+body.light-theme .footer-name {
     color: #fff !important;
+}
+
+/* Responsive Media Queries */
+
+/* Tablets and below (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+
+    .hero-text h1,
+    .hero-text .name,
+    .hero-text h2 {
+        font-size: 2.5rem;
+    }
+
+    .resume-btn {
+        font-size: 1rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    .skills {
+        width: 45%;
+    }
+}
+
+/* Small tablets and large phones (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .skills {
+        width: 80%;
+    }
+
+    .skills h2 {
+        font-size: 1.5rem;
+    }
+
+    .highlight {
+        font-size: 2rem;
+    }
+
+    .timeline-container::after {
+        left: 5px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding: 20px;
+        text-align: left;
+    }
+
+    .timeline-logo {
+        position: relative;
+        margin-bottom: 10px;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .contact-card {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .contact-card input,
+    .contact-card textarea {
+        font-size: 1rem;
+    }
+
+    .contact-card button {
+        font-size: 1.3rem;
+    }
+
+    .footer ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Mobile devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+
+    #hero {
+        padding: 22.5rem 1.5rem;
+    }
+
+    .hero-text h1,
+    .hero-text .name,
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+
+    .resume-btn {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+
+    #skills {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    .skill {
+        font-size: 0.85rem;
+        padding: 6px 10px;
+    }
+
+    .skills {
+        width: 100%;
+    }
+
+    .card-back {
+        transform: rotateY(180deg);
+        background-color: #ffffff2e;
+        color: #fff;
+        text-align: justify;
+        overflow-y: auto;
+        max-height: 280px;
+    }
+
+    .contact-card {
+        padding: 15px;
+    }
+
+    .contact-card input,
+    .contact-card textarea {
+        padding: 10px;
+    }
+
+    .contact-card button {
+        font-size: 1.1rem;
+    }
+
+    .hero-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .timeline-logo img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .education {
+        font-size: 2rem;
+    }
+
+    .para {
+        text-align: center;
+        margin: 0 10px 40px 10px;
+    }
+
+    #skills h1,
+    #experience h1,
+    #contact h1 {
+        font-size: 2rem;
+    }
+
+    #contact p {
+        margin: 0 10px 40px 10px;
+    }
+
+    .footer {
+        padding: 1rem;
+    }
 }

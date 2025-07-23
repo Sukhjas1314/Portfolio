@@ -59,6 +59,14 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
     this.reset(); // Clear the form after submission
 });
 
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+});
+
+
 type();
 
 
